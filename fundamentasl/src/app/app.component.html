@@ -1,3 +1,20 @@
+<h1>ngSwitch</h1>
+<!-- acá esta escuchando el evento de change y setiando la propiedad name-->
+<input type="text" required [(ngModel)]="person.name" >
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Nico'">
+    La persona es Nicolas
+  </p>
+  <p *ngSwitchCase="'Juli'">
+    La persona es Julian
+  </p>
+  <p *ngSwitchCase="'Santi'">
+    La persona es Santiago
+  </p>
+  <p *ngSwitchDefault>
+    El nombre no existe
+  </p>
+</div>
 <h1>*ngFor Object</h1>
 <div>
   <div *ngFor="let product of products">

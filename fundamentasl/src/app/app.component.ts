@@ -7,6 +7,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10
   name = 'Johana';
   age = 25;
   img = 'https://i.pinimg.com/originals/62/a0/a4/62a0a49df1ff2509dd232bbf95a5b8a1.png'
@@ -19,7 +20,12 @@ export class AppComponent {
 
   names: string[] = ['Nico', 'Juli', 'Santi'];
   newName = '';
-  emojis = [ '😂' , '🐦', '🐳','🌮', '💚']
+  emojis = [ '😂' , '🐦', '🐳','🌮', '💚'];
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  };
 
   products: Product[] = [
     {

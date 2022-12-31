@@ -16,9 +16,9 @@
   </p>
 </div>
 <h1>*ngFor Object</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" alt="image">
+    <img [src]="product.image" alt="image">
     <h2>{{product.price}}</h2>
     <h2>{{product.name}}</h2>
   </div>
@@ -72,4 +72,4 @@
 <h2>{{ 'Hola mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola soy {{ name }} y tengo {{ age }} años</h3>
-<img src={{img}} alt="img">
+<img width="200" src={{img}} alt="img">

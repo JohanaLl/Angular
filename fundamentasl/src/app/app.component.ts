@@ -12,6 +12,11 @@ export class AppComponent {
   age = 25;
   img = 'https://i.pinimg.com/originals/62/a0/a4/62a0a49df1ff2509dd232bbf95a5b8a1.png'
   btnDisable = true;
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
   person = {
     name: 'Leidy',
     age: 18,
@@ -88,5 +93,9 @@ export class AppComponent {
   }
    deleteName (index: number) {
     this.names.splice(index, 1);
+   }
+
+   onRegister() {
+    console.log(this.register);    
    }
 }

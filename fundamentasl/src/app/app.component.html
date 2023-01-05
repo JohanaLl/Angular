@@ -1,26 +1,44 @@
-<h1>User Register</h1>
 <!--ngSubmit captura el evento de botón de envio-->
-<form (ngSubmit)="onRegister()" #myForm="ngForm" >
+<form class="form" (ngSubmit)="onRegister()" #myForm="ngForm" >
+  <h1 class="title">User Register</h1>
   <div class="input-group">
     <label class="form-label" for="name">Nombre</label>
-    <input class="form-input" type="text" name="name" required id="name" [(ngModel)]="register.name" #nameInput5="ngModel">
-    <p class="message-errors" [class.invalid]="nameInput5.invalid">Mensajes error</p>
+    <input class="form-input" type="text" name="name" required id="name" 
+    [(ngModel)]="register.name" #nameInput5="ngModel"
+    [ngClass]="{
+      'valid': nameInput5.valid,
+      'invalid': nameInput5.invalid
+    }">
+    <p class="message-errors" [class.invalid]="nameInput5.invalid">Campo requerido</p>
   </div>
   <div class="input-group">
     <label class="form-label" for="email">Email</label>
-    <input class="form-input" type="email" name="email" required id="email" [(ngModel)]="register.email" #emailInput="ngModel">
-    <p class="message-errors" [class.invalid]="emailInput.invalid">Mensajes error</p>
+    <input class="form-input" type="email" name="email" required id="
+    email" 
+    [(ngModel)]="register.email" #emailInput="ngModel"
+    [ngClass]="{
+      'valid': emailInput.valid,
+      'invalid': emailInput.invalid
+    }">
+    <p class="message-errors" [class.invalid]="emailInput.invalid">Campo requerido</p>
   </div>
   <div class="input-group">
     <label class="form-label" for="password">Password</label>
-    <input class="form-input" type="password" name="password" required id="password" [(ngModel)]="register.password" #passwordInput="ngModel">
-    <p class="message-errors" [class.invalid]="passwordInput.invalid">Mensajes error</p>
+    <input class="form-input" type="password" name="password" required id="password" 
+    [(ngModel)]="register.password" #passwordInput="ngModel"
+    [ngClass]="{
+      'valid': passwordInput.valid,
+      'invalid': passwordInput.invalid
+    }">
+    <p class="message-errors" [class.invalid]="passwordInput.invalid">Campo requerido</p>
   </div>
   <!--Siempre dentro de un formulario se debe colocar el type al boton
   si no se coloca los botones que no guardan el formulario sino que hacen otras acciones 
   también van a envier el formulario y se van a terner eventos ineperados-->
-  <button class="button" [disabled]="myForm.invalid" type="submit">Registrar</button> <!--Boton de envio-->
-  <button class="button" type="button">Accion</button> <!--Boton de acciones-->
+  <div class="form-button">
+    <button class="buttonSubmit" [disabled]="myForm.invalid" type="submit">Registrar</button> <!--Boton de envio-->
+    <button class="buttonAction" type="button">Accion</button> <!--Boton de acciones-->
+  </div>
 </form> 
 <!--Clases dinámicas-->
 <h1>Class & Style</h1>

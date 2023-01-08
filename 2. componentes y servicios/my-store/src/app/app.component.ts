@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   imgParent = 'https://www.feelcats.com/wp-content/uploads/2019/03/gatitos.jpg';
+
+  onLoaded(img: string) {
+    console.log('Log Padre', img);
+  }
 }
+  

@@ -3,7 +3,7 @@ import { Component, OnInit, OnChanges, AfterViewInit, OnDestroy, Input, Output, 
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
-  styleUrls: ['./img.component.css']
+  styleUrls: ['./img.component.scss']
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
 
